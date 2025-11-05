@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="inde.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -90,6 +90,8 @@
         <div class="row">
             <div class="col">
                 <?php
+                //incluir conecção do banco
+                include('config.php');
                 switch (@$_REQUEST['page']) {
                     //funcionario
                     case 'cadastrar-funcionario':
@@ -100,6 +102,7 @@
                         break;
                     case 'editar-funcionario':
                         include("editar-funcionario.php");
+                        break;
                     case 'salvar-funcionario':
                         include("salvar-funcionario.php");
                         break;

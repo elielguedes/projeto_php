@@ -1,1 +1,1 @@
-<h1>editar-cliente</h1>
+<h1>editar cliente</h1>

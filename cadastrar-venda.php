@@ -1,1 +1,1 @@
-<h1>Cadastrar-venda</h1>
+<h1>Cadastrar venda</h1>

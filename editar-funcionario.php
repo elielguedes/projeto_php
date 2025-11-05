@@ -1,1 +1,1 @@
-<h1>editar-funcionario</h1>
+<h1>editar funcionario</h1>
