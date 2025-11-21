@@ -121,6 +121,7 @@
                         break;
                     //modelo
                     case 'salvar-modelo':
+                        include("salvar-modelo.php");
                         break;
                     case 'cadastrar-modelo':
                         include('cadastrar-modelo.php');
@@ -130,9 +131,6 @@
                         break;
                     case 'editar-modelo':
                         include("editar-modelo.php");
-                        break;
-                    case 'salvar_modelo':
-                        include("salvar-modelo.php");
                         break;
                     //venda
                     case 'cadastrar-venda':
@@ -154,7 +152,7 @@
                     case 'listar-marcas':
                         include("listar-marcas.php");
                         break;
-                    case 'editar-macas':
+                    case 'editar-marcas':
                         include("editar-marcas.php");
                         break;
                     case 'salvar-marcas':
