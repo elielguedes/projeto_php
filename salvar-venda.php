@@ -2,9 +2,9 @@
 
 switch ($_REQUEST['acao']) {
     case 'cadastrar':
-        $id_cliente = (int) $_POST['id_cliente'];
-        $id_funcionario = (int) $_POST['id_funcionario'];
-        $id_modelo = (int) $_POST['id_modelo'];
+        $id_cliente = $_POST['id_cliente'];
+        $id_funcionario = $_POST['id_funcionario'];
+        $id_modelo = $_POST['id_modelo'];
         $data = $_POST['data_venda'];
         $valor = $_POST['valor_venda'];
 
@@ -21,9 +21,9 @@ switch ($_REQUEST['acao']) {
         break;
 
     case 'editar':
-        $id_cliente = (int) $_POST['id_cliente'];
-        $id_funcionario = (int) $_POST['id_funcionario'];
-        $id_modelo = (int) $_POST['id_modelo'];
+        $id_cliente = $_POST['id_cliente'];
+        $id_funcionario = $_POST['id_funcionario'];
+        $id_modelo = $_POST['id_modelo'];
         $data = $_POST['data_venda'];
         $valor = $_POST['valor_venda'];
 

@@ -38,3 +38,23 @@ $row = $res->fetch_object();
             <input type="text" name="nome_modelo" class="form-control" value="<?php print $row->nome_modelo; ?>">
         </label>
     </div>
+    <div class="mb-3">
+        <label>Cor do Modelo
+            <input type="text" name="cor_modelo" class="form-control" value="<?php print $row->cor_modelo; ?>">
+        </label>
+    </div>
+    <div class="mb-3">
+        <label>Ano do Modelo
+            <input type="number" name="ano_modelo" class="form-control" min="1900" max="2100"
+                value="<?php print $row->ano_modelo; ?>">
+        </label>
+    </div>
+    <div class="mb-3">
+        <label>Tipo
+            <input type="text" name="tipo_modelo" class="form-control" value="<?php print $row->tipo_modelo ?>">
+        </label>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+</form>

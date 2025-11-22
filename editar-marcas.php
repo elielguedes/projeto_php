@@ -11,8 +11,7 @@ $row = $res->fetch_object();
     <input type="hidden" name="id_marca" value="<?php print $row->id_marca; ?>">
     <div class="mb-3">
         <label>Nome da Marca
-            <input type="text" name="nome_marca" class="form-control"
-                value="<?php print htmlspecialchars($row->nome_marca); ?>" required>
+            <input type="text" name="nome_marca" class="form-control" value="<?php print $row->nome_marca; ?>" required>
         </label>
     </div>
     <div>

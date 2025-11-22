@@ -19,7 +19,7 @@ if ($res && $res->num_rows > 0) {
     print "<tbody>";
     while ($row = $res->fetch_object()) {
         $id = $row->id_marca;
-        $nome = htmlspecialchars($row->nome_marca);
+        $nome = $row->nome_marca;
 
         print "<tr>";
         print "<td>$id</td>";

@@ -1,5 +1,4 @@
 <h1>editar venda</h1>
-<h1>Cadastrar venda</h1>
 <form action="?page=salvar-venda" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
 

@@ -1,5 +1,4 @@
 <h1>editar cliente</h1>
-<h1>editar funcionario</h1>
 <?php
 $sql = "SELECT * FROM cliente WHERE id_cliente=" . $_REQUEST['id_cliente'];
 

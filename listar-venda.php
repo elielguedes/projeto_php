@@ -30,10 +30,12 @@ if ($res && $res->num_rows > 0) {
         print "<tr>";
         print "<td>{$row->id_venda}</td>";
         $data = date('d/m/Y', strtotime($row->data_venda));
+        print "<td>{$data}</td>";
         print "<td>{$row->nome_cliente}</td>";
         print "<td>{$row->nome_funcionario}</td>";
         print "<td>{$row->nome_modelo}</td>";
         $valor = number_format($row->valor_venda, 2, ',', '.');
+        print "<td>R$ {$valor}</td>";
         print "<td>";
         print "<button class='btn btn-success' onclick=\"location.href='?page=editar-venda&id_venda={$row->id_venda}';\">Editar</button> ";
         print "<button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-venda&acao=excluir&id_venda={$row->id_venda}';}\">Excluir</button>";

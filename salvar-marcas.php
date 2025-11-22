@@ -3,7 +3,7 @@
 switch ($_REQUEST['acao']) {
     case 'cadastrar':
         $nome = $conn->real_escape_string($_POST['nome_marca']);
-        
+
         // Pega o primeiro modelo disponível
         $modelo_query = $conn->query("SELECT id_modelo FROM modelo LIMIT 1");
         if ($modelo_query && $modelo_query->num_rows > 0) {
@@ -12,7 +12,6 @@ switch ($_REQUEST['acao']) {
         } else {
             print "<script>alert('Erro: Cadastre um modelo primeiro!');</script>";
             print "<script>location.href='?page=cadastrar-modelo';</script>";
-            exit;
         }
 
         $sql = "INSERT INTO marca (nome_marca, modelo_id_modelo) VALUES ('{$nome}', {$modelo_id})";
@@ -44,7 +43,7 @@ switch ($_REQUEST['acao']) {
         break;
 
     case 'excluir':
-        $id = (int) $_REQUEST['id_marca'];
+        $id = $_REQUEST['id_marca'];
         $sql = "DELETE FROM marca WHERE id_marca={$id}";
 
         $res = $conn->query($sql);

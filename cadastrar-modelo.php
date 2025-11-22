@@ -33,8 +33,12 @@
         <label>Ano do Modelo
             <input type="number" name="ano_modelo" class="form-control" min="1900" max="2100">
         </label>
-    </div>
-    <div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </div>
+        <div class="mb-3">
+            <label>Tipo
+                <input type="text" name="tipo_modelo" class="form-control" required>
+            </label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
 </form>

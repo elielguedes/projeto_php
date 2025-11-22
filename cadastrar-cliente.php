@@ -16,15 +16,6 @@
             <input type="text" name="telefone_cliente" class="form-control">
         </label>
     </div>
-    <div class="mb-3">
-        <label>Cpf
-            <input type="text" name="cpf_cliente" class="form-control">
-        </label>
-    </div>
-    <div class="mb-3">
-        <label>enderco_cliente</label>
-        <input type="text" name="endereco_cliente" class="form-control">
-    </div>
     <div>
         <button type="submit" class="bnt bnt-primary">Enviar</button>
     </div>

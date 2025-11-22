@@ -22,17 +22,15 @@ if ($res && $res->num_rows > 0) {
     print "<tbody>";
     while ($row = $res->fetch_object()) {
         $id = $row->id_cliente;
-        $nome = htmlspecialchars($row->nome_cliente);
-        $email = htmlspecialchars($row->email_cliente);
-        $telefone = htmlspecialchars($row->telefone_cliente);
-        $cpf = htmlspecialchars($row->cpf_cliente);
+        $nome = $row->nome_cliente;
+        $email = $row->email_cliente;
+        $telefone = $row->telefone_cliente;
 
         print "<tr>";
         print "<td>$id</td>";
         print "<td>$nome</td>";
         print "<td>$email</td>";
         print "<td>$telefone</td>";
-        print "<td>$cpf</td>";
         print "<td>";
         print "<button class='btn btn-success' onclick=\"location.href='?page=editar-cliente&id_cliente={$id}';\">Editar</button> ";
         print "<button class='btn btn-danger' onclick=\"if (confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-cliente&acao=excluir&id_cliente={$id}';}\">Excluir</button>";

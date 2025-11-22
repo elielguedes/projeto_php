@@ -1,11 +1,9 @@
 <?php
-// Salvar/editar/excluir cliente
-// Observação: assume que $conn (mysqli) já está disponível via include (ex.: config.php)
 switch ($_REQUEST['acao']) {
     case 'cadastrar':
-        $nome = $conn->real_escape_string($_POST['nome_cliente']);
-        $email = $conn->real_escape_string($_POST['email_cliente']);
-        $telefone = $conn->real_escape_string($_POST['telefone_cliente']);
+        $nome = $_POST['nome_cliente'];
+        $email = $_POST['email_cliente'];
+        $telefone = $_POST['telefone_cliente'];
 
         $sql = "INSERT INTO cliente (nome_cliente, email_cliente, telefone_cliente) 
                 VALUES ('{$nome}', '{$email}', '{$telefone}')";
@@ -21,11 +19,11 @@ switch ($_REQUEST['acao']) {
         }
         break;
     case 'editar':
-        $nome = $conn->real_escape_string($_POST['nome_cliente']);
-        $email = $conn->real_escape_string($_POST['email_cliente']);
-        $telefone = $conn->real_escape_string($_POST['telefone_cliente']);
+        $nome = $_POST['nome_cliente'];
+        $email = $_POST['email_cliente'];
+        $telefone = $_POST['telefone_cliente'];
 
-        $id = (int) $_REQUEST['id_cliente'];
+        $id = $_REQUEST['id_cliente'];
         $sql = "UPDATE cliente SET nome_cliente='{$nome}', email_cliente='{$email}', telefone_cliente='{$telefone}' WHERE id_cliente={$id}";
         $res = $conn->query($sql);
 
@@ -39,7 +37,7 @@ switch ($_REQUEST['acao']) {
         break;
 
     case 'excluir':
-        $id = (int) $_REQUEST['id_cliente'];
+        $id = $_REQUEST['id_cliente'];
         $sql = "DELETE FROM cliente WHERE id_cliente={$id}";
 
         $res = $conn->query($sql);

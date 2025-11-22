@@ -22,8 +22,8 @@ switch ($_REQUEST['acao']) {
     case 'editar':
         $nome = $_POST['nome_modelo'];
         $cor = $_POST['cor_modelo'];
-        $ano = (int) $_POST['ano_modelo'];
-        $marca = (int) $_POST['marca_id_marca'];
+        $ano = $_POST['ano_modelo'];
+        $marca = $_POST['marca_id_marca'];
 
         $sql = "UPDATE modelo SET nome_modelo='{$nome}', cor_modelo='{$cor}', ano_modelo={$ano}, marca_id_marca={$marca} WHERE id_modelo=" . $_REQUEST['id_modelo'];
 

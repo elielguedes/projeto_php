@@ -21,9 +21,9 @@ if ($res && $res->num_rows > 0) {
     print "<tbody>";
     while ($row = $res->fetch_object()) {
         $id = $row->id_funcionario;
-        $nome = htmlspecialchars($row->nome_funcionario);
-        $email = htmlspecialchars($row->email_funcionario);
-        $telefone = htmlspecialchars($row->telefone_funcionario);
+        $nome = $row->nome_funcionario;
+        $email = $row->email_funcionario;
+        $telefone = $row->telefone_funcionario;
 
         print "<tr>";
         print "<td>$id</td>";
